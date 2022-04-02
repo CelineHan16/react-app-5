@@ -1,10 +1,12 @@
 function Paragraph(props) {
+  const { size, color, children } = props;
+
   const style = {
-    fontSize: props.size,
-    color: props.color
+    fontSize: size,
+    color: color
   };
 
-  return <p style={style}>{props.children}</p>;
+  return <p style={style}>{children}</p>;
 }
 
 export default Paragraph;

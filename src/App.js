@@ -1,3 +1,6 @@
+import Paragraph from "./components/Paragraph/Paragraph";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
+import Alert from "./components/Alert/Alert";
 
 
 function App() {
@@ -12,11 +15,23 @@ function App() {
 
   const { name, color, size } = example3;
   const { make, modal, carColor, price } = example4;
+  //return
+  // This apple {name} is {color} and {size}. <br />
+  // This {make} {modal} is {price} and {carColor}.
 
   return (
     <div className="App">
-      This apple {name} is {color} and {size}. <br />
-      This {make} {modal} is {price} and {carColor}.
+      <Paragraph size="20px" color="red">Hello world</Paragraph>
+      <ProgressBar progress={50} color="orange" />
+
+      <Alert success>A simple success alert!</Alert>
+      <Alert danger>A simple danger alert!</Alert>
+      <Alert secondary>A simple secondary alert!</Alert>
+      <Alert primary>A simple primary alert!</Alert>
+      <Alert warning>A simple warning alert!</Alert>
+      <Alert info>A simple info alert!</Alert>
+      <Alert light>A simple light alert!</Alert>
+      <Alert dark>A simple dark alert!</Alert>
     </div>
   );
 }
